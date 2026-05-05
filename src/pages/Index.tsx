@@ -71,7 +71,7 @@ const testimonials = [
     name: "Franklin Stefanelli",
     role: "Avaliação Google",
     quote:
-      "Vera é uma profissional diferenciada, humana, muito competente, prestativa e sempre disponível. Sempre que precisar de qualquer assessoria jurídica, ela será a minha advogada. Recomendo!",
+      "Vera é uma profissional diferenciada, humana, muito competente, prestativa e sempre disponível. Sempre que eu precisar de qualquer assessoria jurídica, ela será a minha advogada. Recomendo!",
   },
   {
     name: "Giovana Tozzi",
