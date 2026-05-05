@@ -35,4 +35,30 @@ export const posts: Post[] = [
       "A análise correta dos documentos é essencial para aumentar as chances de aprovação."
     ],
   },
+    {
+    slug: "outro-post-generico",
+    title: "Outro post genérico",
+    excerpt: "Entenda os principais pontos sobre este tema.",
+    image: "/placeholder.png",
+    date: "05 maio 2026",
+    readingTime: "3 min de leitura",
+    content: [
+      "A pensão por morte é um benefício pago aos dependentes do segurado falecido.",
+      "Podem ter direito cônjuge, filhos e outros dependentes, conforme a situação familiar.",
+      "A análise correta dos documentos é essencial para aumentar as chances de aprovação."
+    ],
+  },
+  {
+    slug: "mais-um-post-generico",
+    title: "Mais um post genérico",
+    excerpt: "Entenda os principais pontos sobre este tema.",
+    image: "/placeholder.png",
+    date: "05 maio 2026",
+    readingTime: "3 min de leitura",
+    content: [
+      "A pensão por morte é um benefício pago aos dependentes do segurado falecido.",
+      "Podem ter direito cônjuge, filhos e outros dependentes, conforme a situação familiar.",
+      "A análise correta dos documentos é essencial para aumentar as chances de aprovação."
+    ],
+  },
 ];
