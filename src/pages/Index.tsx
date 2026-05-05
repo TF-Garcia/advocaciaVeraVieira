@@ -226,7 +226,7 @@ const Index = () => {
           <div className="order-1 lg:order-2">
             <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre o Escritório</span>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl text-primary">
-              Tradição jurídica com olhar contemporâneo
+              Tradição jurídica com olhar contemporâneo.
             </h2>
             <div className="mt-6 h-px w-16 bg-primary/30" />
             <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -253,8 +253,8 @@ const Index = () => {
 
             <div className="mt-10 grid grid-cols-3 gap-6">
               {[
-                { n: "+10", l: "Anos de atuação" },
-                { n: "+500", l: "Casos conduzidos" },
+                { n: "7", l: "Anos de atuação" },
+                { n: "+200", l: "Casos conduzidos" },
                 { n: "98%", l: "Clientes satisfeitos" },
               ].map((s) => (
                 <div key={s.l} className="border-l-2 border-primary/20 pl-4">
@@ -276,7 +276,7 @@ const Index = () => {
               Soluções jurídicas completas
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Atendimento especializado em diferentes áreas do direito, sempre com
+              Atendimento especializado em Direito Previdênciário, sempre com
               dedicação, ética e estratégia personalizada.
             </p>
           </div>
