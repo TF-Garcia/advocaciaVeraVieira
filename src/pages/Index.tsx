@@ -29,6 +29,7 @@ import { toast } from "sonner";
 import logo from "@/assets/logo.png";
 import heroLibrary from "@/assets/hero-library.jpg";
 import lawyerPortrait from "@/assets/lawyer-portrait.jpeg";
+import BlogSection from "@/components/BlogSection.tsx";
 
 const WHATSAPP_URL = "https://wa.me/15996548560?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
 
@@ -462,6 +463,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <BlogSection />
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground/80">
