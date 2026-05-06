@@ -36,7 +36,7 @@ const WHATSAPP_URL = "https://wa.me/15996548560?text=Ol%C3%A1%2C%20gostaria%20de
 const areas = [
   {
     icon: Scale,
-    title: "Planejamento Previdenciário",
+    title: "Teste de Escrita",
     desc: "Planejamento previdenciário para servidores públicos de Regimes Próprios de Previdência Social e segurados do Regime Geral de Previdência Social.",
   },
   {
