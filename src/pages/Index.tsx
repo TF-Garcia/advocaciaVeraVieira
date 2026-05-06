@@ -41,7 +41,7 @@ const areas = [
   },
   {
     icon: Briefcase,
-    title: "Benefícios Previdenciários",
+    title: "Aposentadorias e Benefícios",
     desc: "Atua com benefícios de aposentadorias urbanas e pensão por morte.",
   },
   {
