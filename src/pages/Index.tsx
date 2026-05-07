@@ -447,7 +447,15 @@ const Index = () => {
               {[
                 { icon: Phone, label: "Telefone", value: "(15) 99654-8560" },
                 { icon: Mail, label: "Email", value: "vieiraver@gmail.com" },
-                { icon: MapPin, label: "Endereço", value: "Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP" },
+                {
+  icon: MapPin,
+  label: "Endereço",
+  value: (
+    <span translate="no">
+      Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP
+    </span>
+  )
+},
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4 p-6 rounded-2xl border border-border">
                   <div className="h-12 w-12 rounded-xl bg-secondary flex items-center justify-center">
