@@ -511,7 +511,11 @@ const Index = () => {
               <ul className="mt-5 space-y-3 text-sm text-white/60">
                 <li>(15) 99654-8560</li>
                 <li>vieiraver@gmail.com</li>
-                <li translate="no">Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP</li>
+                <li>
+                <address translate="no" className="not-italic">
+                  Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP
+                </address>
+                </li>
                 <li className="pt-3 text-white/40 text-xs">OAB/SP 347.139</li>
               </ul> 
             </div>
