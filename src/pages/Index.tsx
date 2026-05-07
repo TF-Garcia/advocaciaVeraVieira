@@ -41,7 +41,7 @@ const areas = [
   },
   {
     icon: Briefcase,
-    title: "Aposentadorias e Benefícios",
+    title: "Aposentadoria e Benefícios",
     desc: "Atua com benefícios de aposentadorias urbanas e pensão por morte.",
   },
   {
@@ -304,7 +304,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="lg:sticky lg:top-32">
-              <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Por que nos escolher</span>
+              <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Por que nós?</span>
               <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl text-primary">
                 Compromisso, técnica e resultado
               </h2>
@@ -511,7 +511,7 @@ const Index = () => {
               <ul className="mt-5 space-y-3 text-sm text-white/60">
                 <li>(15) 99654-8560</li>
                 <li>vieiraver@gmail.com</li>
-                <li>Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP</li>
+                <li translate="no">Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP</li>
                 <li className="pt-3 text-white/40 text-xs">OAB/SP 347.139</li>
               </ul> 
             </div>
