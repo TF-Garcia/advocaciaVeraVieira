@@ -53,12 +53,12 @@ const areas = [
 
 const differentials = [
   { icon: HandshakeIcon, title: "Atendimento Personalizado", desc: "Consultoria direta com a advogada responsável." },
-  { icon: Clock, title: "Análise Detalhada", desc: "Análise detalhada do CNIS e histórico contributivo." },
+  { icon: Clock, title: "Análise do CNIS", desc: "Análise detalhada do CNIS e histórico contributivo." },
   { icon: Award, title: "Experiência Comprovada", desc: "Experiência de mais de 30 anos como servidora pública do INSS" },
-  { icon: Eye, title: "Simulações Realistas", desc: "Simulação de cenários de aposentadoria" },
+  { icon: Eye, title: "Simulação", desc: "Simulações de cenários de aposentadoria" },
   { icon: Paperclip, title: "Relatórios Personalizados", desc: "Elaboração de relatório completo e personalizado" },
   { icon: Pencil, title: "Estratégias Individualizadas", desc: "Estratégia individualizada de contribuições futuras" },
-  { icon: HammerIcon, title: "Ampla Área de Atuação", desc: "Atuação nas esferas administrativa e judicial" },
+  { icon: HammerIcon, title: "Atuação Especializada", desc: "Atuação nas esferas administrativa e judicial" },
 ];
 
 const testimonials = [
@@ -316,7 +316,7 @@ const Index = () => {
               </p>
               <Button asChild className="mt-8 rounded-full" size="lg">
                 <a href="#contato">
-                  Conheça nosso atendimento <ArrowRight className="ml-2 h-4 w-4" />
+                  Marque uma Consulta <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </div>
