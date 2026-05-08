@@ -286,7 +286,7 @@ export const posts: Post[] = [
     "• regularização documental;",
     "• requerimentos administrativos;",
     "• ações judiciais previdenciárias;",
-    "• recuperação de valores pagos incorretamente.",
+    "• recebimento de valores que foram pagos abaixo do devido.",
 
     "Cada situação exige avaliação individualizada para verificar a efetiva existência de direito revisional e os possíveis impactos financeiros decorrentes da medida.",
 
