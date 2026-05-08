@@ -179,4 +179,122 @@ export const posts: Post[] = [
       "Entre em contato para uma avaliação do seu caso."
     ],
   },
+  {
+  slug: "revisao-da-aposentadoria",
+  title: "Revisão da aposentadoria: quem pode ter direito a receber mais?",
+  excerpt: "Entenda quando é possível revisar o benefício previdenciário e quais situações podem gerar aumento no valor da aposentadoria.",
+  image: "/post-revisao.png",
+  date: "08 maio 2026",
+  readingTime: "6 min de leitura",
+  content: [
+    "A aposentadoria representa, para muitos trabalhadores, o resultado de décadas de contribuição ao sistema previdenciário. Entretanto, o que grande parte dos segurados desconhece é que inúmeros benefícios acabam sendo concedidos com erros de cálculo, períodos não reconhecidos ou aplicação inadequada das regras previdenciárias.",
+
+    "Em razão da complexidade da legislação brasileira e das constantes alterações nas normas do INSS, muitos aposentados recebem valores inferiores ao que realmente poderiam ter direito.",
+
+    "É justamente nesse contexto que surge a possibilidade da revisão da aposentadoria.",
+
+    "A revisão previdenciária consiste na reanálise do benefício já concedido, com o objetivo de verificar se o cálculo realizado observou corretamente todas as contribuições, vínculos empregatícios, atividades especiais e regras aplicáveis ao segurado.",
+
+    "Dependendo da situação, a revisão pode resultar tanto no aumento do valor mensal da aposentadoria quanto no pagamento de diferenças retroativas referentes aos últimos anos.",
+
+    "**⚖️ O que é a revisão da aposentadoria**",
+
+    "A revisão da aposentadoria é um procedimento jurídico e administrativo destinado à correção de falhas existentes na concessão do benefício previdenciário.",
+
+    "Esses erros podem ocorrer por diversos motivos, incluindo falhas do próprio INSS, ausência de documentos no momento do pedido, vínculos não registrados corretamente ou interpretação inadequada da legislação previdenciária.",
+
+    "Em muitos casos, o segurado somente descobre a existência do erro anos após a concessão do benefício, especialmente quando realiza análise detalhada da carta de concessão, do CNIS e do processo administrativo previdenciário.",
+
+    "A legislação brasileira prevê diversas hipóteses em que o aposentado pode buscar a revisão do benefício, desde que observados os requisitos legais e os prazos aplicáveis ao caso concreto.",
+
+    "**📋 Situações mais comuns que podem gerar revisão**",
+
+    "Existem diversas situações que podem justificar a revisão da aposentadoria.",
+
+    "Entre as hipóteses mais frequentes estão:",
+
+    "• períodos de trabalho não computados pelo INSS;",
+    "• atividades especiais não reconhecidas;",
+    "• erros na média salarial;",
+    "• vínculos empregatícios ausentes no CNIS;",
+    "• contribuições recolhidas com valores incorretos;",
+    "• tempo rural não considerado;",
+    "• averbação de tempo militar;",
+    "• revisão de atividades concomitantes;",
+    "• aplicação incorreta das regras de transição;",
+    "• erro no cálculo do tempo de contribuição.",
+
+    "Também são relativamente comuns situações envolvendo profissionais expostos a agentes nocivos, como ruído excessivo, produtos químicos e agentes biológicos, sem que o tempo especial tenha sido reconhecido corretamente pelo INSS.",
+
+    "Nesses casos, o reconhecimento da atividade especial pode aumentar significativamente o valor do benefício ou até alterar a modalidade da aposentadoria concedida.",
+
+    "**⏳ A importância da análise documental**",
+
+    "A análise documental é uma das etapas mais importantes em qualquer procedimento revisional previdenciário.",
+
+    "Documentos como carteira de trabalho, CNIS, PPP, LTCAT, carnês de contribuição, contratos de trabalho e carta de concessão do benefício podem revelar inconsistências capazes de impactar diretamente o cálculo da aposentadoria.",
+
+    "Muitos segurados possuem vínculos antigos incompletos ou sequer registrados corretamente nos sistemas previdenciários.",
+
+    "Além disso, determinadas empresas encerram atividades sem fornecer documentação adequada aos trabalhadores, o que frequentemente exige reconstrução probatória para reconhecimento do período trabalhado.",
+
+    "Em alguns casos, o segurado contribuiu durante anos em valores superiores aos considerados pelo INSS no cálculo da aposentadoria, gerando prejuízos financeiros permanentes caso o erro não seja corrigido.",
+
+    "Por isso, a análise técnica individualizada é fundamental para identificar possíveis direitos revisionais.",
+
+    "**💰 É possível receber valores retroativos?**",
+
+    "Sim. Em determinadas situações, além do aumento do valor mensal da aposentadoria, o segurado também pode ter direito ao recebimento de diferenças retroativas.",
+
+    "Isso significa que os valores pagos incorretamente pelo INSS podem ser recalculados, permitindo a recuperação das diferenças financeiras acumuladas ao longo dos anos.",
+
+    "Entretanto, o pagamento retroativo normalmente observa os limites da prescrição quinquenal, razão pela qual o momento da análise previdenciária pode ser extremamente importante para evitar perda de direitos.",
+
+    "Dependendo da modalidade revisional e do tempo em que o erro permaneceu sem correção, os valores acumulados podem ser expressivos.",
+
+    "**⚠️ Nem toda aposentadoria possui direito à revisão**",
+
+    "Embora existam diversas possibilidades de revisão previstas no Direito Previdenciário, nem toda aposentadoria possui efetiva viabilidade jurídica para alteração do benefício.",
+
+    "Cada caso depende da documentação disponível, da legislação aplicável à época da concessão, da modalidade do benefício e dos prazos legais existentes.",
+
+    "Em determinadas situações, o segurado acredita existir erro no cálculo quando, na realidade, o benefício foi concedido corretamente conforme as regras aplicáveis.",
+
+    "Por isso, é essencial realizar análise previdenciária especializada antes de iniciar qualquer procedimento administrativo ou judicial.",
+
+    "**⚖️ Revisão administrativa ou judicial**",
+
+    "A revisão pode ser buscada tanto administrativamente quanto judicialmente.",
+
+    "Em alguns casos, o INSS pode reconhecer o erro diretamente na esfera administrativa após apresentação da documentação adequada.",
+
+    "Entretanto, quando existe negativa do órgão previdenciário ou controvérsia jurídica relevante, pode ser necessário buscar o reconhecimento do direito perante o Poder Judiciário.",
+
+    "As ações revisionais podem envolver discussões relacionadas ao reconhecimento de atividade especial, inclusão de períodos contributivos, revisão de cálculos previdenciários e aplicação da regra mais vantajosa ao segurado.",
+
+    "A jurisprudência dos tribunais superiores possui papel importante nessas discussões, especialmente em matérias envolvendo aposentadorias especiais e regras de transição da Reforma da Previdência.",
+
+    "**🤝 Como nosso escritório pode auxiliar**",
+
+    "Nosso escritório atua na análise e condução de demandas previdenciárias envolvendo revisão de aposentadorias e benefícios do INSS.",
+
+    "A atuação pode envolver:",
+
+    "• análise da carta de concessão;",
+    "• revisão de cálculos previdenciários;",
+    "• reconhecimento de atividade especial;",
+    "• regularização documental;",
+    "• requerimentos administrativos;",
+    "• ações judiciais previdenciárias;",
+    "• recuperação de valores pagos incorretamente.",
+
+    "Cada situação exige avaliação individualizada para verificar a efetiva existência de direito revisional e os possíveis impactos financeiros decorrentes da medida.",
+
+    "**📞 Fale conosco**",
+
+    "Se você já é aposentado e possui dúvidas sobre o valor do seu benefício, uma análise previdenciária adequada pode ser fundamental para identificar possíveis direitos ainda não reconhecidos.",
+
+    "Entre em contato para uma avaliação individualizada do seu caso."
+  ],
+},
 ];
