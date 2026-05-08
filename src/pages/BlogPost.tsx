@@ -10,6 +10,7 @@ export default function BlogPost() {
     return (
       <main className="min-h-screen px-4 py-20 text-center">
         <h1 className="text-3xl font-bold mb-4">Post não encontrado</h1>
+
         <Link to="/" className="text-primary underline">
           Voltar para a página inicial
         </Link>
@@ -38,10 +39,42 @@ export default function BlogPost() {
           {post.title}
         </h1>
 
-        <div className="space-y-5 text-muted-foreground leading-relaxed">
-          {post.content.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+        <div className="space-y-5 text-muted-foreground leading-8 text-justify">
+          {post.content.map((paragraph, index) => {
+            const isBold = paragraph.startsWith("**") && paragraph.endsWith("**");
+
+            const cleanText = paragraph.replace(/\*\*/g, "");
+
+            const isListItem = paragraph.startsWith("•");
+
+            if (isBold) {
+              return (
+                <h2
+                  key={index}
+                  className="text-2xl font-bold text-foreground pt-6"
+                >
+                  {cleanText}
+                </h2>
+              );
+            }
+
+            if (isListItem) {
+              return (
+                <li
+                  key={index}
+                  className="ml-6 list-disc text-muted-foreground"
+                >
+                  {paragraph.replace("•", "").trim()}
+                </li>
+              );
+            }
+
+            return (
+              <p key={index} className="text-justify">
+                {paragraph}
+              </p>
+            );
+          })}
         </div>
       </article>
     </main>
