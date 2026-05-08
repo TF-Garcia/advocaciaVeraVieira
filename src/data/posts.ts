@@ -37,7 +37,7 @@ export const posts: Post[] = [
       "• benefícios pagos pelo INSS;",
       "• benefícios pagos por Regimes Próprios de Previdência Social (RPPS);",
       "• complementação de aposentadoria ou pensão;",
-      "• e, conforme o caso concreto, valores de previdência privada ou previdência complementar de natureza previdenciária, inclusive em discussões sobre saques e resgates.",
+      "• e, conforme o caso concreto, valores de previdência privada ou previdência complementar de natureza previdenciária, inclusive em situações de saques e resgates.",
 
       "📌 Em outras palavras, o benefício não se limita ao Regime Geral de Previdência Social. Ele pode abranger rendimentos pagos por todos os regimes de previdência social, além de situações envolvendo previdência complementar privada, desde que haja enquadramento jurídico adequado.",
 
