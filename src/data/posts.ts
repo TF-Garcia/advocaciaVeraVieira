@@ -183,7 +183,7 @@ export const posts: Post[] = [
   slug: "revisao-da-aposentadoria",
   title: "Revisão da aposentadoria: quem pode ter direito a receber mais?",
   excerpt: "Entenda quando é possível revisar o benefício previdenciário e quais situações podem gerar aumento no valor da aposentadoria.",
-  image: "/post-revisao.png",
+  image: "/image.png",
   date: "08 maio 2026",
   readingTime: "6 min de leitura",
   content: [
