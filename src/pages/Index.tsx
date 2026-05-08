@@ -32,6 +32,7 @@ import lawyerPortrait from "@/assets/lawyer-portrait.jpeg";
 import BlogSection from "@/components/BlogSection.tsx";
 
 const WHATSAPP_URL = "https://wa.me/15996548560?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
+const CONTACT_RECIPIENT_EMAIL = "tomasfrancisco.carvajal2@gmail.com";
 
 const areas = [
   {
@@ -84,12 +85,34 @@ const testimonials = [
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    preferredTime: "",
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Mensagem enviada! Entraremos em contato em breve.");
-    setForm({ name: "", email: "", message: "" });
+
+    const subject = `Novo agendamento de consulta - ${form.name}`;
+    const body = [
+      "Olá, gostaria de agendar uma consulta.",
+      "",
+      `Nome: ${form.name}`,
+      `Email: ${form.email}`,
+      `Telefone / WhatsApp: ${form.phone}`,
+      `Melhor horário: ${form.preferredTime || "Não informado"}`,
+      "",
+      "Mensagem:",
+      form.message,
+    ].join("\n");
+
+    const mailtoUrl = `mailto:${CONTACT_RECIPIENT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoUrl;
+    toast.success("Seu aplicativo de email foi aberto com a mensagem preenchida.");
   };
 
   const navLinks = [
@@ -411,6 +434,28 @@ const Index = () => {
                     className="mt-2 h-12 rounded-lg bg-background border-border"
                   />
                 </div>
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Telefone / WhatsApp</label>
+                    <Input
+                      required
+                      type="tel"
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      placeholder="(15) 99999-9999"
+                      className="mt-2 h-12 rounded-lg bg-background border-border"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Melhor horário</label>
+                    <Input
+                      value={form.preferredTime}
+                      onChange={(e) => setForm({ ...form, preferredTime: e.target.value })}
+                      placeholder="Ex.: manhã, tarde ou 14h"
+                      className="mt-2 h-12 rounded-lg bg-background border-border"
+                    />
+                  </div>
+                </div>
                 <div>
                   <label className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Mensagem</label>
                   <Textarea
@@ -422,8 +467,13 @@ const Index = () => {
                     className="mt-2 rounded-lg bg-background border-border resize-none"
                   />
                 </div>
-                <Button type="submit" size="lg" className="rounded-full w-full sm:w-auto px-10 h-12">
-                  Enviar mensagem <ArrowRight className="ml-2 h-4 w-4" />
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="rounded-full w-full sm:w-auto px-10 h-12"
+                >
+                  Abrir email
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </form>
             </div>
