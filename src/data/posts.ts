@@ -317,9 +317,9 @@ export const posts: Post[] = [
 
       "O planejamento previdenciário consiste em uma análise técnica e individualizada do histórico contributivo do segurado.",
 
-      "Essa análise considera fatores como idade, tempo de contribuição, salários recolhidos, vínculos empregatícios, atividades especiais, períodos rurais, contribuições em atraso e regras previdenciárias aplicáveis ao caso concreto.",
+      "Essa análise considera fatores como idade, tempo de contribuição, salários de contribuição, vínculos empregatícios, atividades especiais, períodos rurais, contribuições em atraso e regras previdenciárias aplicáveis ao caso concreto.",
 
-      "O principal objetivo do planejamento é identificar qual estratégia pode gerar o melhor benefício possível dentro da legalidade previdenciária.",
+      "O principal objetivo do planejamento é identificar qual estratégia pode gerar o melhor benefício possível dentro da legislação previdenciária.",
 
       "Além disso, o planejamento também permite antecipar problemas documentais e corrigir inconsistências antes do protocolo do pedido administrativo junto ao INSS.",
 
@@ -337,7 +337,6 @@ export const posts: Post[] = [
       "• períodos rurais;",
       "• múltiplos vínculos;",
       "• contribuições como autônomo;",
-      "• contribuições em atraso;",
       "• projeções de renda mensal futura.",
 
       "Em muitos casos, pequenos detalhes aparentemente simples podem alterar significativamente o valor final da aposentadoria ou a regra previdenciária aplicável ao segurado.",
@@ -348,7 +347,7 @@ export const posts: Post[] = [
 
       "Atualmente, porém, existem diversas regras permanentes e regras de transição coexistindo simultaneamente, tornando o sistema muito mais complexo.",
 
-      "Isso faz com que dois segurados com históricos contributivos semelhantes possam possuir direitos completamente diferentes dependendo da idade, da data de ingresso no sistema previdenciário e do tempo acumulado antes da reforma.",
+      "Isso faz com que dois segurados com históricos contributivos semelhantes possuam direitos completamente diferentes dependendo da idade, da data de ingresso no sistema previdenciário e do tempo acumulado antes da reforma.",
 
       "Em determinadas situações, poucos meses adicionais de contribuição podem representar aumento relevante no valor da renda mensal da aposentadoria durante toda a vida do segurado.",
 
