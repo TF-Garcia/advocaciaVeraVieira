@@ -32,7 +32,7 @@ import lawyerPortrait from "@/assets/lawyer-portrait.jpeg";
 import BlogSection from "@/components/BlogSection.tsx";
 
 const WHATSAPP_URL = "https://wa.me/15996548560?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
-const CONTACT_RECIPIENT_EMAIL = "tomasfrancisco.carvajal2@gmail.com";
+const CONTACT_RECIPIENT_EMAIL = "vieraver@gmail.com";
 
 const areas = [
   {
