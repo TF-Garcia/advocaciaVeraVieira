@@ -21,10 +21,18 @@ import {
   Paperclip,
   Pencil,
   HammerIcon,
+  Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
 import heroLibrary from "@/assets/hero-library.jpg";
@@ -32,7 +40,8 @@ import lawyerPortrait from "@/assets/lawyer-portrait.jpeg";
 import BlogSection from "@/components/BlogSection.tsx";
 
 const WHATSAPP_URL = "https://wa.me/15996548560?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
-const CONTACT_RECIPIENT_EMAIL = "vieraver@gmail.com";
+const CONTACT_RECIPIENT_EMAIL = "vieiraver@gmail.com";
+const GOOGLE_REVIEWS_URL = "https://search.google.com/local/reviews?placeid=ChIJi-0ZFab1xZQR9detm4KLyWw";
 
 const areas = [
   {
@@ -64,22 +73,36 @@ const differentials = [
 
 const testimonials = [
   {
-    name: "Maria Regina Carvalho Guedes",
-    role: "Avaliação Google",
+    id: "aderval-soares",
+    name: "Aderval Soares",
+    role: "05 de maio de 2026 • Avaliação Google",
+    rating: 5,
     quote:
-      "Foi uma imensa satisfação entrar em contato com a Dra Vera! Profissional impecável, tirou minhas dúvidas e me orientou perfeitamente em tudo que eu precisava com relação á aposentadoria! Muito competente, atenciosa e dedicada!",
+      "Ótimo atendimento, agilidades, rapidez. Fui instruindo para melhor decisão no resultado para minha aposentadoria. Realmente valeu a pena. Super recomendo.",
   },
   {
-    name: "Franklin Stefanelli",
-    role: "Avaliação Google",
+    id: "claudia-lebre",
+    name: "Claudia Lebre",
+    role: "29 de abr. de 2025 • Avaliação Google",
+    rating: 5,
     quote:
-      "Vera é uma profissional diferenciada, humana, muito competente, prestativa e sempre disponível. Sempre que eu precisar de qualquer assessoria jurídica, ela será a minha advogada. Recomendo!",
+      "A Dra. Vera fez meu planejamento previdenciário com qualidade e competência. Ela fez todo o levantamento das minhas informações junto ao INSS e atualizações necessárias. Assim, já podemos deixar tudo pronto para entrar com requerimento da aposentadoria daqui há pouco tempo! Muito competente e atenciosa.",
   },
   {
-    name: "Giovana Tozzi",
-    role: "Avaliação Google ",
+    id: "salvador-stefanelli",
+    name: "Salvador Stefanelli",
+    role: "28 de abr. de 2025 • Avaliação Google",
+    rating: 5,
     quote:
-      "Atendimento diferenciado da Dra Vera, muito atenciosa. Me explicou do início ao fim sobre tudo que deveria saber, me auxiliou. Profissional impecável, parabéns. Que Deus abençoe muito pela capacidade como lida com cada detalhe.",
+      "Dra. Vera Cristina Vieira é uma profissional altamente competente! Conhece a fundo o sistema previdenciário e organização de inventários! Rápida na comunicação com o cliente, o que é essencial no desenvolvimento das etapas a serem cumpridas. Prática, resoluta e investigativa! Absolutamente recomendo a todos o seu trabalho! Oferece um preço justo, o que proporciona um custo-benefício altamente favorável ao cliente.",
+  },
+  {
+    id: "marcia-madureira",
+    name: "Marcia Madureira",
+    role: "12 de dez. de 2024 • Avaliação Google",
+    rating: 5,
+    quote:
+      "A Dra Vera é extremamente competente, atenciosa e preocupada com os clientes. Resolveu o problema da aposentadoria do meu marido que se arrastava há anos com extrato no INSS incompleto, etc. Meu marido recebeu a carta de concessão da aposentadoria dele na semana passada! Além do conhecimento, uma pessoa de total confiança.",
   },
 ];
 
@@ -131,7 +154,7 @@ const Index = () => {
           <a href="#" className="flex items-center gap-3">
             <img src={logo} alt="Advocacia Vera Vieira" className="h-12 w-auto" />
             <span className="hidden sm:flex flex-col leading-tight">
-              <span className="font-serif text-3xl font-bold text-primary">Vera Vieira </span>
+              <span className="font-serif text-4xl font-bold text-primary">Vera Vieira </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                   Advocacia &amp; Consultoria Jurídica
                 </span>
@@ -202,16 +225,16 @@ const Index = () => {
         <div className="absolute inset-0 bg-primary/30" />
         <div className="container mx-auto relative z-10 py-24">
           <div className="max-w-3xl text-primary-foreground animate-fade-in-up">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 text-xs uppercase tracking-[0.2em] text-white/90 mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 text-lg uppercase tracking-[0.2em] text-white/90 mb-8">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               Vera Vieira
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] text-white">
-              Aposentadoria Fácil<br />
-              <span className="italic font-extralight text-white/90">
-                Advocacia e Consultoria Jurídica
-              </span>
-            </h1>
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-thin leading-[1.05] text-white">
+  Aposentadoria Fácil<br />
+  <span className="italic font-extralight text-white/90">
+    Advocacia e Consultoria Jurídica
+  </span>
+</h1>
             <p className="mt-6 text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
               Atuação técnica e personalizada para proteger seus direitos e oferecer
               segurança em cada decisão. Estratégia jurídica com transparência,
@@ -380,21 +403,65 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="mt-16 grid md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors"
-              >
-                <Quote className="h-8 w-8 text-gold/80" />
-                <p className="mt-5 text-white/90 leading-relaxed text-sm">"{t.quote}"</p>
-                <div className="mt-8 pt-6 border-t border-white/10">
-                  <div className="font-serif text-base text-white">{t.name}</div>
-                  <div className="text-xs uppercase tracking-wider text-white/60 mt-1">{t.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="mt-16"
+          >
+            <CarouselContent className="-ml-6">
+              {testimonials.map((review) => (
+                <CarouselItem key={review.id} className="pl-6 md:basis-1/2 lg:basis-1/3">
+                  <a
+                    href={GOOGLE_REVIEWS_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block h-full rounded-2xl bg-white/5 backdrop-blur border border-white/10 p-8 hover:bg-white/10 transition-colors"
+                    aria-label={`Abrir avaliações do Google de ${review.name}`}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <Quote className="h-8 w-8 text-gold/80 flex-shrink-0" />
+                      <div className="flex gap-1" aria-label={`${review.rating} estrelas`}>
+                        {Array.from({ length: 5 }).map((_, index) => (
+                          <Star
+                            key={index}
+                            className={`h-4 w-4 ${
+                              index < Math.round(review.rating)
+                                ? "fill-gold text-gold"
+                                : "text-white/25"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+
+                    <p className="mt-5 text-white/90 leading-relaxed text-sm">"{review.quote}"</p>
+
+                    <div className="mt-8 pt-6 border-t border-white/10">
+                      <div className="flex items-center gap-3">
+                        {review.profilePhotoUrl && (
+                          <img
+                            src={review.profilePhotoUrl}
+                            alt=""
+                            className="h-10 w-10 rounded-full object-cover"
+                          />
+                        )}
+                        <div>
+                          <div className="font-serif text-base text-white">{review.name}</div>
+                          <div className="text-xs uppercase tracking-wider text-white/60 mt-1">
+                            {review.role}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 h-10 w-10 bg-primary text-primary-foreground border-white/20 hover:bg-primary-glow lg:-left-14" />
+            <CarouselNext className="-right-4 h-10 w-10 bg-primary text-primary-foreground border-white/20 hover:bg-primary-glow lg:-right-14" />
+          </Carousel>
         </div>
       </section>
 
