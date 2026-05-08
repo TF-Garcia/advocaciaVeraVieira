@@ -39,7 +39,7 @@ export const posts: Post[] = [
   slug: "isencao-de-imposto-de-renda",
   title: "Isenção de Imposto de Renda: entenda seus direitos",
   excerpt: "Veja quais são os critérios para obter a isenção e como solicitar.",
-  image: "/placeholder.png",
+  image: "/post-IR.png",
   date: "08 maio 2026",
   readingTime: "4 min de leitura",
   content: [
