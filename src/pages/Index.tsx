@@ -206,9 +206,11 @@ const Index = () => {
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               Vera Vieira
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] text-white">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] text-white">
               Aposentadoria Fácil<br />
-              <span className="italic font-normal text-white/90">Advocacia e Consultoria Jurídica</span>
+              <span className="italic font-extralight text-white/90">
+                Advocacia e Consultoria Jurídica
+              </span>
             </h1>
             <p className="mt-6 text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
               Atuação técnica e personalizada para proteger seus direitos e oferecer
