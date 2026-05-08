@@ -301,7 +301,7 @@ export const posts: Post[] = [
     slug: "planejamento-previdenciario",
     title: "Planejamento previdenciário: por que ele pode fazer diferença na sua aposentadoria?",
     excerpt: "Entenda como o planejamento previdenciário pode evitar prejuízos e ajudar na escolha da melhor regra de aposentadoria.",
-    image: "/post-planejamento.png",
+    image: "/image2.png",
     date: "08 maio 2026",
     readingTime: "6 min de leitura",
     content: [
@@ -421,7 +421,7 @@ export const posts: Post[] = [
     slug: "aposentadoria-do-professor",
     title: "Aposentadoria do professor: entenda as regras e quem pode ter direito",
     excerpt: "Veja como funciona a aposentadoria do professor após a Reforma da Previdência e quais requisitos são exigidos.",
-    image: "/post-professor.png",
+    image: "/image3.png",
     date: "08 maio 2026",
     readingTime: "6 min de leitura",
     content: [
