@@ -104,6 +104,38 @@ const testimonials = [
     quote:
       "A Dra Vera é extremamente competente, atenciosa e preocupada com os clientes. Resolveu o problema da aposentadoria do meu marido que se arrastava há anos com extrato no INSS incompleto, etc. Meu marido recebeu a carta de concessão da aposentadoria dele na semana passada! Além do conhecimento, uma pessoa de total confiança.",
   },
+  {
+    id: "giovana-tozzi",
+    name: "Giovana Tozzi",
+    role: "7 meses atrás • Avaliação Google",
+    rating: 5,
+    quote:
+      "Atendimento diferenciado da Dra Vera , muito atenciosa . Me explicou do início ao fim sobre tudo que deveria saber , me auxiliou. Profissional impecável, parabéns. Que Deus abençoe muito pela capacidade como lida com cada detalhe.",
+  },
+  {
+    id: "maria-regina-carvalho-guedes",
+    name: "Maria Regina Carvalho Guedes",
+    role: "2 meses atrás • Avaliação Google",
+    rating: 5,
+    quote:
+      "Foi uma imensa satisfação entrar em contato com a Dra Vera! Profissional impecável, tirou minhas dúvidas e me orientou perfeitamente em tudo que eu precisava com relação á aposentadoria! Muito competente, atenciosa e dedicada!",
+  },
+  {
+    id: "nelson-de-oliveira-junior",
+    name: "Nelson de Oliveira Junior",
+    role: "11 meses atrás • Avaliação Google",
+    rating: 5,
+    quote:
+      "Contratamos os serviços da Dra. Vera Vieira, para auxiliar-nos em processo extra judicial. Ela se mostrou muito competente, sempre nos ajudando a dirimir quaisquer dúvidas e também nos contatos com todos os herdeiros, bem como junto ao INSS para resolvermos questão de resíduos deixados pela falecida. Muito conhecedora dos assuntos ligados a esse órgão, onde conseguimos resolver a questão quase de imediato. Recomendo seus serviços.",
+  },
+  {
+    id: "franklin-stefanelli",
+    name: "Franklin Stefanelli",
+    role: "11 meses atrás • Avaliação Google",
+    rating: 5,
+    quote:
+      "Vera é uma profissional diferenciada, humana, muito competente, prestativa e sempre disponível. Sempre que precisar de qualquer assessoria jurídica, ela será a minha advogada. Recomendo!",
+  },
 ];
 
 const Index = () => {
