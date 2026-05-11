@@ -36,7 +36,7 @@ import {
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
 import heroLibrary from "@/assets/hero-library.jpg";
-import lawyerPortrait from "@/assets/lawyer-portrait.jpeg";
+import lawyerPortrait from "@/assets/portrait-vera.png";
 import BlogSection from "@/components/BlogSection.tsx";
 
 const WHATSAPP_URL = "https://wa.me/15996548560?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -344,6 +344,31 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Formação */}
+      <section id="formacao" className="py-20 lg:py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Formação</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl text-white">
+              Formação acadêmica
+            </h2>
+            <ul className="mt-8 space-y-5 text-white/80 leading-relaxed list-disc pl-5">
+              <li>
+                Graduação na Faditu - Faculdade de Direito de Itu, instituição com mais de 50 anos de tradição,
+                com ótima avaliação pelo ENAD e MEC. Conclusão do curso em 2004.
+              </li>
+              <li>
+                Curso de Pós-Graduação lato sensu em Direito Previdenciário pela Universidade Gama Filho,
+                realizado de 1/07/2008 a 27/01/2010.
+              </li>
+              <li>
+                Pós-Graduação em Advocacia Previdenciária na Prática em 2023.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
