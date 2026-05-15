@@ -186,7 +186,7 @@ const Index = () => {
           <a href="#" className="flex items-center gap-3">
             <img src={logo} alt="Advocacia Vera Vieira" className="h-12 w-auto" />
             <span className="hidden sm:flex flex-col leading-tight">
-              <span className="font-serif text-4xl font-bold text-primary">Vera Lúcia </span>
+              <span className="font-serif text-4xl font-bold text-primary">Vera Vieira </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                   Advocacia &amp; Consultoria Jurídica
                 </span>
