@@ -34,7 +34,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { toast } from "sonner";
-import logo from "@/assets/logo.png";
 import heroLibrary from "@/assets/hero-library.jpg";
 import lawyerPortrait from "@/assets/portrait-vera.png";
 import BlogSection from "@/components/BlogSection.tsx";
@@ -42,6 +41,8 @@ import BlogSection from "@/components/BlogSection.tsx";
 const WHATSAPP_URL = "https://wa.me/15996548560?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
 const CONTACT_RECIPIENT_EMAIL = "vieiraver@gmail.com";
 const GOOGLE_REVIEWS_URL = "https://search.google.com/local/reviews?placeid=ChIJi-0ZFab1xZQR9detm4KLyWw";
+const LOGO_FULL = "/brand/logo-full.svg";
+const LOGO_FULL_DARK = "/brand/logo-full-dark.svg";
 
 const areas = [
   {
@@ -184,14 +185,8 @@ const Index = () => {
       <header className="fixed top-0 inset-x-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
         <div className="container mx-auto flex h-20 items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Advocacia Vera Vieira" className="h-12 w-auto" />
-            <span className="hidden sm:flex flex-col leading-tight">
-              <span className="font-serif text-4xl font-bold text-primary">Vera Vieira </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  Advocacia &amp; Consultoria Jurídica
-                </span>
-              </span>
-            </a>
+            <img src={LOGO_FULL} alt="Vera Vieira Advocacia e Consultoria Jurídica" className="h-14 w-auto" />
+          </a>
 
             <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((l) => (
@@ -206,7 +201,7 @@ const Index = () => {
           </nav>
 
           <div className="hidden lg:block">
-            <Button asChild className="rounded-full">
+            <Button asChild className="rounded-sm">
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
                 <MessageCircle className="mr-2 h-4 w-4" /> Fale Conosco
               </a>
@@ -235,7 +230,7 @@ const Index = () => {
                   {l.label}
                 </a>
               ))}
-              <Button asChild className="rounded-full w-full">
+              <Button asChild className="rounded-sm w-full">
                 <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
                   <MessageCircle className="mr-2 h-4 w-4" /> Fale no WhatsApp
                 </a>
@@ -257,8 +252,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-primary/30" />
         <div className="container mx-auto relative z-10 py-24">
           <div className="max-w-3xl text-primary-foreground animate-fade-in-up">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 text-lg uppercase tracking-[0.2em] text-white/90 mb-8">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+            <span className="inline-flex items-center gap-2 border-l-2 border-gold pl-4 text-lg uppercase tracking-[0.2em] text-white/90 mb-8">
               Vera Vieira
             </span>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-thin leading-[1.05] text-white">
@@ -273,7 +267,7 @@ const Index = () => {
               ética e resultados.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="rounded-full bg-white text-primary hover:bg-white/90 text-base px-8 h-14">
+              <Button asChild size="lg" className="rounded-sm bg-white text-primary hover:bg-white/90 text-base px-8 h-14">
                 <a href="#contato">
                   Agende uma Consulta <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -282,7 +276,7 @@ const Index = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="rounded-full bg-transparent border-white/40 text-white hover:bg-white hover:text-primary text-base px-8 h-14"
+                className="rounded-sm bg-transparent border-white/40 text-white hover:bg-white hover:text-primary text-base px-8 h-14"
               >
                 <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
                   <MessageCircle className="mr-2 h-4 w-4" /> Falar no WhatsApp
@@ -297,11 +291,11 @@ const Index = () => {
       <section id="sobre" className="py-24 lg:py-32 bg-background">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="absolute -inset-4 bg-secondary rounded-2xl -z-10" />
+            <div className="absolute -inset-4 bg-secondary -z-10" />
             <img
               src={lawyerPortrait}
               alt="Advogado responsável"
-              className="rounded-2xl w-full h-[520px] object-cover shadow-[var(--shadow-elegant)]"
+              className="w-full h-[520px] object-cover grayscale shadow-[var(--shadow-elegant)]"
             />
           </div>
           <div className="order-1 lg:order-2">
@@ -391,9 +385,9 @@ const Index = () => {
             {areas.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="group bg-background rounded-2xl p-8 border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all duration-500 hover:-translate-y-1"
+                className="group bg-background p-8 border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all duration-500 hover:-translate-y-1"
               >
-                <div className="h-14 w-14 rounded-xl bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
+                <div className="h-14 w-14 bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
                   <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground" />
                 </div>
                 <h3 className="mt-6 text-xl text-primary">{title}</h3>
@@ -419,7 +413,7 @@ const Index = () => {
                 diferenciais que tornam a Advocacia Vera Vieira a escolha certa para a
                 sua causa.
               </p>
-              <Button asChild className="mt-8 rounded-full" size="lg">
+              <Button asChild className="mt-8 rounded-sm" size="lg">
                 <a href="#contato">
                   Marque uma Consulta <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -430,9 +424,9 @@ const Index = () => {
               {differentials.map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
-                  className="flex gap-5 p-6 rounded-2xl border border-border bg-background hover:bg-secondary/50 transition-colors duration-300"
+                  className="flex gap-5 p-6 border border-border bg-background hover:bg-secondary/50 transition-colors duration-300"
                 >
-                  <div className="h-12 w-12 rounded-xl bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0">
+                  <div className="h-12 w-12 bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
@@ -474,7 +468,7 @@ const Index = () => {
                     href={GOOGLE_REVIEWS_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="block h-full rounded-2xl bg-white/5 backdrop-blur border border-white/10 p-8 hover:bg-white/10 transition-colors"
+                    className="block h-full bg-white/5 backdrop-blur border border-white/10 p-8 hover:bg-white/10 transition-colors"
                     aria-label={`Abrir avaliações do Google de ${review.name}`}
                   >
                     <div className="flex items-start justify-between gap-4">
@@ -537,7 +531,7 @@ const Index = () => {
           </div>
 
           <div className="mt-16 grid lg:grid-cols-5 gap-8">
-            <div className="lg:col-span-3 bg-secondary rounded-2xl p-8 lg:p-10">
+            <div className="lg:col-span-3 bg-secondary p-8 lg:p-10">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label className="text-xs uppercase tracking-wider text-muted-foreground font-medium">Nome</label>
@@ -546,7 +540,7 @@ const Index = () => {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="Seu nome completo"
-                    className="mt-2 h-12 rounded-lg bg-background border-border"
+                    className="mt-2 h-12 rounded-sm bg-background border-border"
                   />
                 </div>
                 <div>
@@ -557,7 +551,7 @@ const Index = () => {
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     placeholder="seu@email.com"
-                    className="mt-2 h-12 rounded-lg bg-background border-border"
+                    className="mt-2 h-12 rounded-sm bg-background border-border"
                   />
                 </div>
                 <div className="grid gap-5 sm:grid-cols-2">
@@ -569,7 +563,7 @@ const Index = () => {
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       placeholder="(15) 99999-9999"
-                      className="mt-2 h-12 rounded-lg bg-background border-border"
+                      className="mt-2 h-12 rounded-sm bg-background border-border"
                     />
                   </div>
                   <div>
@@ -578,7 +572,7 @@ const Index = () => {
                       value={form.preferredTime}
                       onChange={(e) => setForm({ ...form, preferredTime: e.target.value })}
                       placeholder="Ex.: manhã, tarde ou 14h"
-                      className="mt-2 h-12 rounded-lg bg-background border-border"
+                      className="mt-2 h-12 rounded-sm bg-background border-border"
                     />
                   </div>
                 </div>
@@ -590,13 +584,13 @@ const Index = () => {
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="Conte brevemente sobre o seu caso"
                     rows={5}
-                    className="mt-2 rounded-lg bg-background border-border resize-none"
+                    className="mt-2 rounded-sm bg-background border-border resize-none"
                   />
                 </div>
                 <Button
                   type="submit"
                   size="lg"
-                  className="rounded-full w-full sm:w-auto px-10 h-12"
+                  className="rounded-sm w-full sm:w-auto px-10 h-12"
                 >
                   Abrir email
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -609,9 +603,9 @@ const Index = () => {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 p-6 rounded-2xl bg-primary text-primary-foreground hover:bg-primary-glow transition-colors"
+                className="flex items-center gap-4 p-6 bg-primary text-primary-foreground hover:bg-primary-glow transition-colors"
               >
-                <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center">
+                <div className="h-12 w-12 bg-white/10 flex items-center justify-center">
                   <MessageCircle className="h-5 w-5" />
                 </div>
                 <div>
@@ -633,8 +627,8 @@ const Index = () => {
   )
 },
               ].map(({ icon: Icon, label, value }) => (
-                <div key={label} className="flex items-center gap-4 p-6 rounded-2xl border border-border">
-                  <div className="h-12 w-12 rounded-xl bg-secondary flex items-center justify-center">
+                <div key={label} className="flex items-center gap-4 p-6 border border-border">
+                  <div className="h-12 w-12 bg-secondary flex items-center justify-center">
                     <Icon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -656,8 +650,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-10">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3">
-                <img src={logo} alt="Advocacia Vera Vieira" className="h-12 w-auto brightness-0 invert" />
-                <div className="font-serif text-xl text-white">Advocacia Vera Vieira</div>
+                <img src={LOGO_FULL_DARK} alt="Vera Vieira Advocacia e Consultoria Jurídica" className="h-14 w-auto" />
               </div>
               <p className="mt-5 text-sm text-white/60 max-w-md leading-relaxed">
                 Escritório de advocacia comprometido com a excelência técnica, a
@@ -668,7 +661,7 @@ const Index = () => {
                   <a
                     key={i}
                     href="#"
-                    className="h-10 w-10 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors"
+                    className="h-10 w-10 bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors"
                     aria-label="Rede social"
                   >
                     <Icon className="h-4 w-4 text-white" />

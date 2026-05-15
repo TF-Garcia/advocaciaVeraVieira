@@ -28,7 +28,7 @@ export default function BlogPost() {
         <img
           src={post.image}
           alt={post.title}
-          className="w-full h-64 object-cover rounded-2xl mt-8 mb-8"
+          className="w-full h-64 object-cover mt-8 mb-8"
         />
 
         <p className="text-sm text-muted-foreground mb-3">

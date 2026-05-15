@@ -45,7 +45,7 @@ export default function BlogSection() {
             <Button
               type="button"
               variant="outline"
-              className="mt-2 h-12 rounded-full"
+              className="mt-2 h-12 rounded-sm"
               onClick={() => setVisiblePosts((current) => current + MOBILE_POSTS_STEP)}
             >
               <Plus className="mr-2 h-4 w-4" />
@@ -79,7 +79,7 @@ export default function BlogSection() {
 function PostCard({ post }: { post: Post }) {
   return (
     <Link to={`/posts/${post.slug}`} className="group block h-full">
-      <article className="h-full overflow-hidden rounded-2xl border border-border bg-background shadow-[var(--shadow-card)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[var(--shadow-elegant)]">
+      <article className="h-full overflow-hidden border border-border bg-background shadow-[var(--shadow-card)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[var(--shadow-elegant)]">
         <img
           src={post.image}
           alt={post.title}
