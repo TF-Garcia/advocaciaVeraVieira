@@ -47,7 +47,7 @@ const LOGO_FULL_DARK = "/brand/logo-full-dark.svg";
 const areas = [
   {
     icon: Scale,
-    title: "Plano Previdênciário",
+    title: "Plano Previdenciário",
     desc: "Planejamento previdenciário para servidores públicos de Regimes Próprios de Previdência Social e segurados do Regime Geral de Previdência Social.",
   },
   {
