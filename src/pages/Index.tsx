@@ -38,7 +38,7 @@ import heroLibrary from "@/assets/hero-library.jpg";
 import lawyerPortrait from "@/assets/portrait-vera.png";
 import BlogSection from "@/components/BlogSection.tsx";
 
-const WHATSAPP_URL = "https://wa.me/5515996548560?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
+const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5515996548560&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
 const CONTACT_RECIPIENT_EMAIL = "vieiraver@gmail.com";
 const GOOGLE_REVIEWS_URL = "https://search.google.com/local/reviews?placeid=ChIJi-0ZFab1xZQR9detm4KLyWw";
 const LOGO_FULL = "/brand/logo-full.svg";
