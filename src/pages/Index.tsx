@@ -622,7 +622,7 @@ const Index = () => {
   label: "Endereço",
   value: (
     <span translate="no">
-      Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP
+      Sorocaba/SP
     </span>
   )
 },
@@ -690,7 +690,7 @@ const Index = () => {
                 <li>vieiraver@gmail.com</li>
                 <li>
                 <address translate="no" className="not-italic">
-                  Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP
+                  Sorocaba/SP
                 </address>
                 </li>
                 <li className="pt-3 text-white/40 text-xs">OAB/SP 347.139</li>
