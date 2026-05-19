@@ -137,6 +137,14 @@ const testimonials = [
     quote:
       "Vera é uma profissional diferenciada, humana, muito competente, prestativa e sempre disponível. Sempre que precisar de qualquer assessoria jurídica, ela será a minha advogada. Recomendo!",
   },
+  {
+    id: "lu",
+    name: "LU",
+    role: "18 de maio de 2026 • Avaliação Google",
+    rating: 5,
+    quote:
+      "Quero elogiar o excelente trabalho realizado pela Dra. Vera Vieira no meu planejamento previdenciário e também no serviço de requerimento da minha aposentadoria. Todo o processo foi conduzido com muita competência, organização e atenção aos detalhes, e minha aposentadoria foi concluída em pouco mais de um mês, superando minhas expectativas. Além da agilidade e eficiência, sempre recebi orientações claras e seguras em cada etapa, o que me trouxe muita tranquilidade. Mesmo após a conclusão do processo, continuei recebendo suporte e esclarecimentos importantes, inclusive sobre uma possível revisão da aposentadoria no futuro. Só tenho gratidão pelo atendimento humano, pela dedicação e pelo profissionalismo demonstrado durante todo o acompanhamento.",
+  },
 ];
 
 const Index = () => {
@@ -381,11 +389,11 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-6">
             {areas.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="group bg-background p-8 border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all duration-500 hover:-translate-y-1"
+                className="group mx-auto w-full sm:w-[80%] lg:w-full bg-background p-8 border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all duration-500 hover:-translate-y-1"
               >
                 <div className="h-14 w-14 bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
                   <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground" />
@@ -487,7 +495,7 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <p className="mt-5 text-white/90 leading-relaxed text-sm">"{review.quote}"</p>
+                    <p className="mt-5 max-h-40 overflow-y-auto pr-2 text-white/90 leading-relaxed text-sm md:max-h-none md:overflow-visible md:pr-0">"{review.quote}"</p>
 
                     <div className="mt-8 pt-6 border-t border-white/10">
                       <div className="flex items-center gap-3">
