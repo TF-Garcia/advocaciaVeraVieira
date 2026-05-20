@@ -84,7 +84,7 @@ const testimonials = [
   {
     id: "claudia-lebre",
     name: "Claudia Lebre",
-    role: "29 de abr. de 2025 • Avaliação Google",
+    role: "29 de abr. de 2025 • Avaliação Google.",
     rating: 5,
     quote:
       "A Dra. Vera fez meu planejamento previdenciário com qualidade e competência. Ela fez todo o levantamento das minhas informações junto ao INSS e atualizações necessárias. Assim, já podemos deixar tudo pronto para entrar com requerimento da aposentadoria daqui há pouco tempo! Muito competente e atenciosa.",
