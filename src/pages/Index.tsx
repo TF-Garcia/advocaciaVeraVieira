@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import {
   Scale,
   Briefcase,
@@ -17,30 +17,22 @@ import {
   Menu,
   X,
   ArrowRight,
-  Quote,
   Paperclip,
   Pencil,
   HammerIcon,
-  Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { toast } from "sonner";
-import heroLibrary from "@/assets/hero-library.jpg";
-import lawyerPortrait from "@/assets/portrait-vera.png";
-import BlogSection from "@/components/BlogSection.tsx";
+import heroLibrary from "@/assets/hero-library.webp";
+import lawyerPortrait from "@/assets/portrait-vera.webp";
+import LazyOnVisible from "@/components/LazyOnVisible";
+
+const BlogSection = lazy(() => import("@/components/BlogSection"));
+const TestimonialCarousel = lazy(() => import("@/components/TestimonialCarousel"));
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5515996548560&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
 const CONTACT_RECIPIENT_EMAIL = "vieiraver@gmail.com";
-const GOOGLE_REVIEWS_URL = "https://search.google.com/local/reviews?placeid=ChIJi-0ZFab1xZQR9detm4KLyWw";
 const LOGO_FULL = "/brand/logo-full.svg";
 const LOGO_FULL_DARK = "/brand/logo-full-dark.svg";
 
@@ -72,81 +64,6 @@ const differentials = [
   { icon: HammerIcon, title: "Atuação Especializada", desc: "Atuação nas esferas administrativa e judicial" },
 ];
 
-const testimonials = [
-  {
-    id: "aderval-soares",
-    name: "Aderval Soares",
-    role: "05 de maio de 2026 • Avaliação Google",
-    rating: 5,
-    quote:
-      "Ótimo atendimento, agilidades, rapidez. Fui instruindo para melhor decisão no resultado para minha aposentadoria. Realmente valeu a pena. Super recomendo.",
-  },
-  {
-    id: "claudia-lebre",
-    name: "Claudia Lebre",
-    role: "29 de abr. de 2025 • Avaliação Google.",
-    rating: 5,
-    quote:
-      "A Dra. Vera fez meu planejamento previdenciário com qualidade e competência. Ela fez todo o levantamento das minhas informações junto ao INSS e atualizações necessárias. Assim, já podemos deixar tudo pronto para entrar com requerimento da aposentadoria daqui há pouco tempo! Muito competente e atenciosa.",
-  },
-  {
-    id: "salvador-stefanelli",
-    name: "Salvador Stefanelli",
-    role: "28 de abr. de 2025 • Avaliação Google",
-    rating: 5,
-    quote:
-      "Dra. Vera Cristina Vieira é uma profissional altamente competente! Conhece a fundo o sistema previdenciário e organização de inventários! Rápida na comunicação com o cliente, o que é essencial no desenvolvimento das etapas a serem cumpridas. Prática, resoluta e investigativa! Absolutamente recomendo a todos o seu trabalho! Oferece um preço justo, o que proporciona um custo-benefício altamente favorável ao cliente.",
-  },
-  {
-    id: "marcia-madureira",
-    name: "Marcia Madureira",
-    role: "12 de dez. de 2024 • Avaliação Google",
-    rating: 5,
-    quote:
-      "A Dra Vera é extremamente competente, atenciosa e preocupada com os clientes. Resolveu o problema da aposentadoria do meu marido que se arrastava há anos com extrato no INSS incompleto, etc. Meu marido recebeu a carta de concessão da aposentadoria dele na semana passada! Além do conhecimento, uma pessoa de total confiança.",
-  },
-  {
-    id: "giovana-tozzi",
-    name: "Giovana Tozzi",
-    role: "7 meses atrás • Avaliação Google",
-    rating: 5,
-    quote:
-      "Atendimento diferenciado da Dra Vera , muito atenciosa . Me explicou do início ao fim sobre tudo que deveria saber , me auxiliou. Profissional impecável, parabéns. Que Deus abençoe muito pela capacidade como lida com cada detalhe.",
-  },
-  {
-    id: "maria-regina-carvalho-guedes",
-    name: "Maria Regina Carvalho Guedes",
-    role: "2 meses atrás • Avaliação Google",
-    rating: 5,
-    quote:
-      "Foi uma imensa satisfação entrar em contato com a Dra Vera! Profissional impecável, tirou minhas dúvidas e me orientou perfeitamente em tudo que eu precisava com relação á aposentadoria! Muito competente, atenciosa e dedicada!",
-  },
-  {
-    id: "nelson-de-oliveira-junior",
-    name: "Nelson de Oliveira Junior",
-    role: "11 meses atrás • Avaliação Google",
-    rating: 5,
-    quote:
-      "Contratamos os serviços da Dra. Vera Vieira, para auxiliar-nos em processo extra judicial. Ela se mostrou muito competente, sempre nos ajudando a dirimir quaisquer dúvidas e também nos contatos com todos os herdeiros, bem como junto ao INSS para resolvermos questão de resíduos deixados pela falecida. Muito conhecedora dos assuntos ligados a esse órgão, onde conseguimos resolver a questão quase de imediato. Recomendo seus serviços.",
-  },
-  {
-    id: "franklin-stefanelli",
-    name: "Franklin Stefanelli",
-    role: "11 meses atrás • Avaliação Google",
-    rating: 5,
-    quote:
-      "Vera é uma profissional diferenciada, humana, muito competente, prestativa e sempre disponível. Sempre que precisar de qualquer assessoria jurídica, ela será a minha advogada. Recomendo!",
-  },
-  {
-    id: "lu",
-    name: "LU",
-    role: "18 de maio de 2026 • Avaliação Google",
-    rating: 5,
-    quote:
-      "Quero elogiar o excelente trabalho realizado pela Dra. Vera Vieira no meu planejamento previdenciário e também no serviço de requerimento da minha aposentadoria. Todo o processo foi conduzido com muita competência, organização e atenção aos detalhes, e minha aposentadoria foi concluída em pouco mais de um mês, superando minhas expectativas. Além da agilidade e eficiência, sempre recebi orientações claras e seguras em cada etapa, o que me trouxe muita tranquilidade. Mesmo após a conclusão do processo, continuei recebendo suporte e esclarecimentos importantes, inclusive sobre uma possível revisão da aposentadoria no futuro. Só tenho gratidão pelo atendimento humano, pela dedicação e pelo profissionalismo demonstrado durante todo o acompanhamento.",
-  },
-];
-
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [form, setForm] = useState({
@@ -157,7 +74,7 @@ const Index = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const subject = `Novo agendamento de consulta - ${form.name}`;
@@ -176,6 +93,7 @@ const Index = () => {
     const mailtoUrl = `mailto:${CONTACT_RECIPIENT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoUrl;
+    const { toast } = await import("sonner");
     toast.success("Seu aplicativo de email foi aberto com a mensagem preenchida.");
   };
 
@@ -462,65 +380,11 @@ const Index = () => {
             </p>
           </div>
 
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="mt-16"
-          >
-            <CarouselContent className="-ml-6">
-              {testimonials.map((review) => (
-                <CarouselItem key={review.id} className="pl-6 md:basis-1/2 lg:basis-1/3">
-                  <a
-                    href={GOOGLE_REVIEWS_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="block h-full bg-white/5 backdrop-blur border border-white/10 p-8 hover:bg-white/10 transition-colors"
-                    aria-label={`Abrir avaliações do Google de ${review.name}`}
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <Quote className="h-8 w-8 text-gold/80 flex-shrink-0" />
-                      <div className="flex gap-1" aria-label={`${review.rating} estrelas`}>
-                        {Array.from({ length: 5 }).map((_, index) => (
-                          <Star
-                            key={index}
-                            className={`h-4 w-4 ${
-                              index < Math.round(review.rating)
-                                ? "fill-gold text-gold"
-                                : "text-white/25"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-
-                    <p className="mt-5 max-h-40 overflow-y-auto pr-2 text-white/90 leading-relaxed text-sm md:max-h-none md:overflow-visible md:pr-0">"{review.quote}"</p>
-
-                    <div className="mt-8 pt-6 border-t border-white/10">
-                      <div className="flex items-center gap-3">
-                        {review.profilePhotoUrl && (
-                          <img
-                            src={review.profilePhotoUrl}
-                            alt=""
-                            className="h-10 w-10 rounded-full object-cover"
-                          />
-                        )}
-                        <div>
-                          <div className="font-serif text-base text-white">{review.name}</div>
-                          <div className="text-xs uppercase tracking-wider text-white/60 mt-1">
-                            {review.role}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="-left-4 h-10 w-10 bg-primary text-primary-foreground border-white/20 hover:bg-primary-glow lg:-left-14" />
-            <CarouselNext className="-right-4 h-10 w-10 bg-primary text-primary-foreground border-white/20 hover:bg-primary-glow lg:-right-14" />
-          </Carousel>
+          <LazyOnVisible fallback={<div className="mt-16 h-72" />}>
+            <Suspense fallback={<div className="mt-16 h-72" />}>
+              <TestimonialCarousel />
+            </Suspense>
+          </LazyOnVisible>
         </div>
       </section>
 
@@ -650,7 +514,11 @@ const Index = () => {
         </div>
       </section>
 
-      <BlogSection />
+      <LazyOnVisible fallback={<div className="h-96 bg-background" />}>
+        <Suspense fallback={<div className="h-96 bg-background" />}>
+          <BlogSection />
+        </Suspense>
+      </LazyOnVisible>
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground/80">

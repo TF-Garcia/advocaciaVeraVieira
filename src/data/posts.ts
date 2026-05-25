@@ -13,7 +13,7 @@ export const posts: Post[] = [
     slug: "isencao-de-imposto-de-renda",
     title: "Isenção de Imposto de Renda: entenda seus direitos",
     excerpt: "Veja quais são os critérios para obter a isenção e como solicitar.",
-    image: "/post-IR.png",
+    image: "/post-IR.webp",
     date: "08 maio 2026",
     readingTime: "4 min de leitura",
     content: [
@@ -183,7 +183,7 @@ export const posts: Post[] = [
   slug: "revisao-da-aposentadoria",
   title: "Revisão da aposentadoria: quem pode ter direito a receber mais?",
   excerpt: "Entenda quando é possível revisar o benefício previdenciário e quais situações podem gerar aumento no valor da aposentadoria.",
-  image: "/image.png",
+  image: "/image.webp",
   date: "08 maio 2026",
   readingTime: "6 min de leitura",
   content: [
@@ -301,7 +301,7 @@ export const posts: Post[] = [
     slug: "planejamento-previdenciario",
     title: "Planejamento previdenciário: por que ele pode fazer diferença na sua aposentadoria?",
     excerpt: "Entenda como o planejamento previdenciário pode evitar prejuízos e ajudar na escolha da melhor regra de aposentadoria.",
-    image: "/image2.png",
+    image: "/image2.webp",
     date: "08 maio 2026",
     readingTime: "6 min de leitura",
     content: [
@@ -420,7 +420,7 @@ export const posts: Post[] = [
     slug: "aposentadoria-do-professor",
     title: "Aposentadoria do professor: entenda as regras e quem pode ter direito",
     excerpt: "Veja como funciona a aposentadoria do professor após a Reforma da Previdência e quais requisitos são exigidos.",
-    image: "/image3.png",
+    image: "/image3.webp",
     date: "08 maio 2026",
     readingTime: "6 min de leitura",
     content: [

@@ -1,28 +1,52 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import BlogPost from "./pages/BlogPost.tsx";
 
-const queryClient = new QueryClient();
+const Index = lazy(() => import("./pages/Index"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const NotificationToaster = lazy(() => import("./components/NotificationToaster"));
+
+function AppLoader() {
+  return (
+    <div className="min-h-screen bg-background" aria-label="Carregando" />
+  );
+}
+
+function IdleNotificationHost() {
+  const [showToaster, setShowToaster] = useState(false);
+
+  useEffect(() => {
+    const requestIdle = window.requestIdleCallback ?? ((callback: IdleRequestCallback) => window.setTimeout(callback, 1800));
+    const cancelIdle = window.cancelIdleCallback ?? window.clearTimeout;
+    const idleId = requestIdle(() => setShowToaster(true));
+
+    return () => cancelIdle(idleId);
+  }, []);
+
+  if (!showToaster) {
+    return null;
+  }
+
+  return (
+    <Suspense fallback={null}>
+      <NotificationToaster />
+    </Suspense>
+  );
+}
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+  <>
+    <IdleNotificationHost />
+    <BrowserRouter>
+      <Suspense fallback={<AppLoader />}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/posts/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+      </Suspense>
+    </BrowserRouter>
+  </>
 );
 
 export default App;
